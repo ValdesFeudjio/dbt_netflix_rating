@@ -14,13 +14,13 @@ dbt netflix rating/
 │   ├── data_models.drawio              # Draw.io file for data models (star schema)
 │   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
 │
-├── dbt_netflix/                            # SQL scripts for ETL and transformations
-│   ├── analyse/                         # Scripts for extracting and loading raw data
+├── dbt_netflix/                        # SQL scripts for ETL and transformations
+│   ├── analyse/                        # Scripts for extracting and loading raw data
 │   ├── macros/                         # Scripts for cleaning and transforming data
-│   ├── models/                           # Scripts for creating analytical models
-│   ├── seeds/                         # Scripts for cleaning and transforming data
+│   ├── models/                         # Scripts for creating analytical models
+│   ├── seeds/                          # Scripts for cleaning and transforming data
 │   ├── snapshots/
-│   ├── tests/                         # Scripts for cleaning and transforming data
+│   ├── tests/                          # Scripts for cleaning and transforming data
 │    
 │
 ├── README.md                           # Project overview and instructions
@@ -28,3 +28,6 @@ dbt netflix rating/
 ├── .gitignore                          # Files and directories to be ignored by Git
 └── requirements.txt                    # Dependencies and requirements for the project
 ```
+
+
+je donne 
