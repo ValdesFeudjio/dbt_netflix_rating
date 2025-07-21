@@ -1,1 +1,1 @@
-# dbt_netflix_rating
+# dbt netflix rating
