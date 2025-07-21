@@ -17,3 +17,5 @@ snapshot-paths:
 models:
   netflix:
     +materialized: view
+    dim : 
+        +materialized : table
