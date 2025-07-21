@@ -124,6 +124,8 @@ from raw_genome_tags
 limit 100;
 
 
+select *
+from raw_genome_tags;
 
 
 
