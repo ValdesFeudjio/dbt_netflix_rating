@@ -19,3 +19,4 @@ models:
     +materialized: view
     dim : 
         +materialized : table
+        snowflake_warehouse : DEV

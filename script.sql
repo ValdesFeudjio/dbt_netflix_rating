@@ -1,5 +1,30 @@
+
+USE ROLE ACCOUNTADMIN;
+
+-- Step 2: Create the `transform` role and assign it to ACCOUNTADMIN
+CREATE ROLE IF NOT EXISTS TRANSFORM;
+GRANT ROLE TRANSFORM TO ROLE ACCOUNTADMIN;
+
+-- Step 3: Create a default warehouse
+CREATE WAREHOUSE IF NOT EXISTS COMPUTE_WH;
+GRANT OPERATE ON WAREHOUSE COMPUTE_WH TO ROLE TRANSFORM;
+
+-- Step 4: Create the `dbt` user and assign to the transform role
+CREATE USER IF NOT EXISTS dbt
+  PASSWORD='dbtPassword123'
+  LOGIN_NAME='dbt'
+  MUST_CHANGE_PASSWORD=FALSE
+  DEFAULT_WAREHOUSE='COMPUTE_WH'
+  DEFAULT_ROLE=TRANSFORM
+  DEFAULT_NAMESPACE='MOVIELENS.RAW'
+  COMMENT='DBT user used for data transformation';
+  
+ALTER USER dbt SET TYPE = LEGACY_SERVICE;
+GRANT ROLE TRANSFORM TO USER dbt;
+
 create database if not exists movilens;
 create schema if not exists raw;
+create schema if not exists DEV;
 
 
 -- creation de l'integration AWS en utilisant un stage
